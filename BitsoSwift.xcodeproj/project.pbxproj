@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207E03E368034F48539AF319 /* Pods_BitsoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D4F3A64ADD8A16B22B6B3F /* Pods_BitsoSwift.framework */; };
 		7022CE661F78A71B004CBA79 /* BitsoSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7022CE641F78A71B004CBA79 /* BitsoSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7022CE6D1F78AF8B004CBA79 /* BitsoSwiftAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7022CE6C1F78AF8B004CBA79 /* BitsoSwiftAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D4F3A64ADD8A16B22B6B3F /* Pods_BitsoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitsoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E227798760E3824DE68D42D /* Pods-BitsoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitsoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitsoSwift/Pods-BitsoSwift.release.xcconfig"; sourceTree = "<group>"; };
 		7022CE611F78A71B004CBA79 /* BitsoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitsoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7022CE641F78A71B004CBA79 /* BitsoSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsoSwift.h; sourceTree = "<group>"; };
 		7022CE651F78A71B004CBA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7022CE6C1F78AF8B004CBA79 /* BitsoSwiftAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoSwiftAPI.swift; sourceTree = "<group>"; };
+		BE520D038B7342FB520A314E /* Pods-BitsoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitsoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitsoSwift/Pods-BitsoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207E03E368034F48539AF319 /* Pods_BitsoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A4AF6F98352A8ED0AC92642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D4F3A64ADD8A16B22B6B3F /* Pods_BitsoSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7022CE571F78A71B004CBA79 = {
 			isa = PBXGroup;
 			children = (
 				7022CE631F78A71B004CBA79 /* BitsoSwift */,
 				7022CE621F78A71B004CBA79 /* Products */,
+				91D15EB11922C33C9F9BFC08 /* Pods */,
+				0A4AF6F98352A8ED0AC92642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +65,18 @@
 			children = (
 				7022CE641F78A71B004CBA79 /* BitsoSwift.h */,
 				7022CE651F78A71B004CBA79 /* Info.plist */,
+				7022CE6C1F78AF8B004CBA79 /* BitsoSwiftAPI.swift */,
 			);
 			path = BitsoSwift;
+			sourceTree = "<group>";
+		};
+		91D15EB11922C33C9F9BFC08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE520D038B7342FB520A314E /* Pods-BitsoSwift.debug.xcconfig */,
+				6E227798760E3824DE68D42D /* Pods-BitsoSwift.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7022CE691F78A71B004CBA79 /* Build configuration list for PBXNativeTarget "BitsoSwift" */;
 			buildPhases = (
+				C1FD75BA4B5FACB22019EF9C /* [CP] Check Pods Manifest.lock */,
 				7022CE5C1F78A71B004CBA79 /* Sources */,
 				7022CE5D1F78A71B004CBA79 /* Frameworks */,
 				7022CE5E1F78A71B004CBA79 /* Headers */,
 				7022CE5F1F78A71B004CBA79 /* Resources */,
+				9C698D1CAB020B86D39DD6AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -95,6 +124,7 @@
 				TargetAttributes = {
 					7022CE601F78A71B004CBA79 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,11 +156,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C698D1CAB020B86D39DD6AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitsoSwift/Pods-BitsoSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1FD75BA4B5FACB22019EF9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitsoSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7022CE5C1F78A71B004CBA79 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7022CE6D1F78AF8B004CBA79 /* BitsoSwiftAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +319,9 @@
 		};
 		7022CE6A1F78A71B004CBA79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE520D038B7342FB520A314E /* Pods-BitsoSwift.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -266,6 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jorgeperales.me.BitsoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,7 +343,9 @@
 		};
 		7022CE6B1F78A71B004CBA79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E227798760E3824DE68D42D /* Pods-BitsoSwift.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
